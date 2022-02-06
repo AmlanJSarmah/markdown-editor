@@ -1,18 +1,13 @@
 import React from "react";
+import { Markdown } from "./Markdown";
+import { MarkdownInput } from "./MarkdownInput";
 
 export const Editor: React.FC = () => {
   return (
-    <div className="container-xxl mt-5">
+    <div className="container-xxl mt-5" id="editor">
       <div className="row justify-content-between border border-dark">
-        <div
-          className="col-6 p-0 text-center border-end border-dark"
-          id="editor"
-        >
-          Editor
-        </div>
-        <div className="col-6 p-0 text-center" id="output">
-          Output
-        </div>
+        <MarkdownInput />
+        <Markdown />
       </div>
     </div>
   );

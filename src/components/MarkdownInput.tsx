@@ -9,12 +9,6 @@ export const MarkdownInput: React.FC<props> = ({ setNewValue }) => {
       <textarea
         onChange={(element) => {
           let text = element.target.value;
-          if (text == null) {
-            setNewValue(null);
-            return;
-          }
-          text = text.replaceAll(" ", "&nbsp;");
-          text = text.replaceAll("\n", "<br/>");
           setNewValue(text);
         }}
       />

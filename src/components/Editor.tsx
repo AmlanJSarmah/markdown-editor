@@ -7,10 +7,18 @@ export const Editor: React.FC = () => {
   useEffect(() => {
     console.log(text);
   }, [text]);
+  const updateText = (text: string | null) => {
+    if (text == null) {
+      setText(null);
+      return;
+    }
+    text = text.replaceAll("\n", "<br/>");
+    setText(text);
+  };
   return (
     <div className="container-xxl mt-5" id="editor">
       <div className="row justify-content-between border border-dark">
-        <MarkdownInput setNewValue={setText} />
+        <MarkdownInput setNewValue={updateText} />
         <Markdown text={text} />
       </div>
     </div>

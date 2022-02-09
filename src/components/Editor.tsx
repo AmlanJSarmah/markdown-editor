@@ -17,8 +17,8 @@ export const Editor: React.FC = () => {
   };
   return (
     <div className="container-xxl mt-5" id="editor">
-      <div className="row justify-content-between border border-dark">
-        <MarkdownInput setNewValue={updateText} />
+      <div className="row justify-content-between border border-dark" id="editor-child">
+        <MarkdownInput setNewValue={updateText}/>
         <Markdown text={text} />
       </div>
     </div>

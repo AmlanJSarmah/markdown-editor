@@ -4,7 +4,7 @@ interface props {
 
 export const MarkdownInput: React.FC<props> = ({ setNewValue }) => {
   return (
-    <div className="col-6 p-0 text-center border-end border-dark" id="editor">
+    <div className="col-6 p-0 text-center border-end border-dark" id="editor-input">
       <div className="border-bottom border-dark">Editor</div>
       <textarea
         onChange={(element) => {

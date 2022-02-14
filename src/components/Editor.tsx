@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Markdown } from "./Markdown";
 import { MarkdownInput } from "./MarkdownInput";
+import { manageStorage } from "../utils"
 
 export const Editor: React.FC = () => {
   const [text, setText] = useState<string | null>(null);
   useEffect(() => {
-    console.log(text);
+    manageStorage(text)
   }, [text]);
   const updateText = (text: string | null) => {
     if (text == null) {

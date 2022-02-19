@@ -6,6 +6,7 @@ interface props {
 export const MarkdownInput: React.FC<props> = ({ setNewValue,text }) => {
   const defaultValue = (text: string | null) => {
     if (!text) return 
+    text = text.replaceAll(" <br/> ","\n")
     return text
   }
   return (

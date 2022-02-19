@@ -14,7 +14,7 @@ export const Editor: React.FC = () => {
       setText(null);
       return;
     }
-    text = text.replaceAll("\n", "<br/>");
+    text = text.replaceAll("\n", " <br/> ");
     setText(text);
   };
   return (

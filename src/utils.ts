@@ -10,4 +10,13 @@ export const getStorage = () => {
 
 export const markdownCreator = (text: string) => {
   const textArray = text.split(" ");
+  const notations = ["#","##","###","####","#####","######","**"]
+  for(let i = 0; i<textArray.length; i++)
+  {
+    for(let j=0; j<notations.length; j++){
+      if(textArray[i] == notations[j]){
+        //code goes hear
+      }
+    }
+  }
 };

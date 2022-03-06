@@ -1,5 +1,6 @@
 import parse from "html-react-parser";
 import { useState, useEffect } from "react";
+import { markdownCreator } from "../utils";
 
 interface props {
 	text: string | null;
@@ -10,7 +11,8 @@ export const Compiler: React.FC<props> = ({ text }) => {
 
 	//updates text at each render
 	useEffect(() => {
-		setRenderText(text);
+		setRenderText(markdownCreator(text));
+		console.log(renderText);
 	}, [text]);
 
 	return (

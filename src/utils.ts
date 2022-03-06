@@ -15,7 +15,7 @@ export const markdownCreator = (text: string) => {
   for(let i = 0; i<textArray.length; i++)
   {
     for(let j=0; j<notations.length; j++){
-      if(textArray[i] == notations[j]){
+      if(textArray[i] === notations[j]){
         stateManager = !stateManager
       }
     }

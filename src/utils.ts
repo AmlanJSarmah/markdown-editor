@@ -10,6 +10,7 @@ export const getStorage = () => {
 
 export const markdownCreator = (text: string | null) => {
   if(text == null) return "";
+  let tracker = ""
   const textArray = text.split(" ");
   const notations = ["#", "##", "###", "####", "#####", "######", "**"];
   let stateManager = false;
@@ -18,27 +19,27 @@ export const markdownCreator = (text: string | null) => {
       if (textArray[i] === notations[j]) {
         stateManager = !stateManager;
         if(textArray[i]==="#"){
-          if(stateManager) textArray[i] = "<h1>"
+          if(stateManager) textArray[i] = "<h1>" tracker = "</h1>"
           else textArray[i] = "</h1>"
         }
         else if(textArray[i] === "##"){
-          if(stateManager) textArray[i] = "<h2>"
+          if(stateManager) textArray[i] = "<h2>" tracker = "</h2>"
           else textArray[i] = "</h2>"
         }
         else if(textArray[i] === "###"){
-          if(stateManager) textArray[i] = "<h3>"
+          if(stateManager) textArray[i] = "<h3>" tracker = "</h3>"
           else textArray[i] = "</h3>"
         }
         else if(textArray[i] === "####"){
-          if(stateManager) textArray[i] = "<h4>"
+          if(stateManager) textArray[i] = "<h4>" tracker = "</h4>"
           else textArray[i] = "</h4>"
         }
         else if(textArray[i] === "#####"){
-          if(stateManager) textArray[i] = "<h5>"
+          if(stateManager) textArray[i] = "<h5>" tracker = "</h5>"
           else textArray[i] = "</h5>"
         }
         else{
-          if(stateManager) textArray[i] = "<b>"
+          if(stateManager) textArray[i] = "<b>" tracker = "</h6>"
           else textArray[i] = "</b>"
         }
       }

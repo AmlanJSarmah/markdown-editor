@@ -19,30 +19,50 @@ export const markdownCreator = (text: string | null) => {
       if (textArray[i] === notations[j]) {
         stateManager = !stateManager;
         if(textArray[i]==="#"){
-          if(stateManager) textArray[i] = "<h1>" tracker = "</h1>"
+          if(stateManager) {
+            textArray[i] = "<h1>" 
+            tracker = "</h1>"
+          }
           else textArray[i] = "</h1>"
         }
         else if(textArray[i] === "##"){
-          if(stateManager) textArray[i] = "<h2>" tracker = "</h2>"
+          if(stateManager) {
+            textArray[i] = "<h2>" 
+            tracker = "</h2>"
+          }
           else textArray[i] = "</h2>"
         }
         else if(textArray[i] === "###"){
-          if(stateManager) textArray[i] = "<h3>" tracker = "</h3>"
+          if(stateManager) {
+            textArray[i] = "<h3>"
+            tracker = "</h3>"
+          }
           else textArray[i] = "</h3>"
         }
         else if(textArray[i] === "####"){
-          if(stateManager) textArray[i] = "<h4>" tracker = "</h4>"
+          if(stateManager) {
+            textArray[i] = "<h4>" 
+            tracker = "</h4>"
+          }
           else textArray[i] = "</h4>"
         }
         else if(textArray[i] === "#####"){
-          if(stateManager) textArray[i] = "<h5>" tracker = "</h5>"
+          if(stateManager) {
+            textArray[i] = "<h5>" 
+            tracker = "</h5>"
+          }
           else textArray[i] = "</h5>"
         }
         else{
-          if(stateManager) textArray[i] = "<b>" tracker = "</h6>"
+          if(stateManager) textArray[i] = "<b>"
           else textArray[i] = "</b>"
         }
       }
+    }
+    if(textArray[i] === "<br/>" && tracker !== ""){
+      textArray[i] = tracker + "<br/>"
+      tracker = ""
+      stateManager = false;
     }
   }
   return textArray.join(" ")

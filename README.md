@@ -10,3 +10,7 @@ You can try the editor online by clicking [here](https://kind-swanson-1daeb2.net
 2. html-react-parser
 3. Prettier(code formatting)
 4. Bootstrap (via CDN)
+
+### TODOs
+[] support for links
+[] support for bold , italics etc.

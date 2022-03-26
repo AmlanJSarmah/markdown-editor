@@ -12,7 +12,6 @@ export const Compiler: React.FC<props> = ({ text }) => {
 	//updates text at each render
 	useEffect(() => {
 		setRenderText(markdownCreator(text));
-		console.log(renderText);
 	}, [text]);
 
 	return (

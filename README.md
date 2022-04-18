@@ -18,3 +18,8 @@ You can try the editor online by clicking [here](https://kind-swanson-1daeb2.net
 ### TODOs
 - support for links
 - support for bold , italics etc.
+
+
+### Demo
+
+You can try the demo by clicking [here](https://kind-swanson-1daeb2.netlify.app/)

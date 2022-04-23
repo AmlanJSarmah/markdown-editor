@@ -6,7 +6,7 @@ The **markdown** compiler is impleamented using React (TypeScript) and html-reac
 You can try the editor online by clicking [here](https://kind-swanson-1daeb2.netlify.app/)
 
 ### Screenshots
-![Screenshot (20)](https://user-images.githubusercontent.com/99042379/163667855-262b54d3-a3de-43d6-83f6-42a8f4a11ab3.png)
+![Screenshot (21)](https://user-images.githubusercontent.com/99042379/164879611-bce580e3-15f9-48a6-b3a8-1508f9953506.png)
 
 
 ### Dependencies used
